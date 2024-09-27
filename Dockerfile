@@ -26,4 +26,4 @@ RUN apk add --no-cache ca-certificates tini
 
 COPY --from=build /bugna/bin/* /usr/bin/
 
-ENTRYPOINT [ "/usr/bin/bugnad --utxoindex --disable-upnp" ]
+ENTRYPOINT [ "/usr/bin/bugnad", "--utxoindex" ]
